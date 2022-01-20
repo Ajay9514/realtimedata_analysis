@@ -1,0 +1,28 @@
+---- > Open Docker
+-----> Open Visual Studio code
+-----> Locate the file
+-----> Enter docker-compose up    (to run the file) 
+-----> All the tools are installed. 
+-----> check the url http://localhost8290 to check the Divolte tracker is running
+-----> check the url http://localhost9200 to check database is running
+-----> Once the url is entered it asks to eneter the username and password, 
+         Username: elastic
+         Password: changeme     
+------> check the url http://localhost5601 to check database is running
+------> Kibana visualization tool opens up enter the login creditianls
+          Username: elastic
+          Password: changeme
+------> Now the connect the local to the website
+------> Open command promopt, locate the ngrok file 
+------> Save the token with the command ngrok.exe authtoken 226nQa2B8hQKfmVQLl10G7G8qC9_7EXWHoVmn4cCKdCKNSU9D 
+          the token is saved in the local system
+------> Now enter the command ngrok http 8290 -host-header="localhost:8290"
+------> Copy the http link from the command prompt and paste in the "realtimedata.ml/admin" in the header and footer section in settings. 
+------> Copy that url and check if that url is working, it should open a javascript. 
+------> Once the javascript is opened then save the code in the admin page of website thus the system is ready to communicate with the website and starts tracking the data. 
+------> After that in Visual studio code enter python ./kafka_consumer_for_elastic_.py file and it is ready to track and visualize the data.
+------> Now open the visualization tool and check the dashboard the fields are generated and thus the output can be viewed. 
+
+
+*********** 
+-----> Enter docker-compose up --build -d  (this command will build the document if there is any changes done in the document that will be updated automatically by this command)
